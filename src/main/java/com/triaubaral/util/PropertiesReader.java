@@ -69,7 +69,7 @@ public enum PropertiesReader {
 	public String read(Property property, String... params) throws IOException{
 		
 		 String propertyValue = load(property.getClasspath()).getProperty(property.getCode());
-		 	
+		 
 	        if (params != null) {
 	
 	            for (int i = 0; i < params.length; i++) {
