@@ -46,6 +46,10 @@ public enum PropertiesReader {
 	}	
 	
 	private String loadResourceContentFromClasspath(String resourcePath) throws IOException{
+		
+		if(resourcePath == null || resourcePath.isEmpty()){
+			throw new RuntimeException("La resource indiquée dans le classpath ne peut être vide ou null");
+		}
 			
 		InputStream inputStream = this.getClass().getResourceAsStream(resourcePath);	
 		
